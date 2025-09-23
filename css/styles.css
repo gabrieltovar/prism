@@ -465,7 +465,7 @@ article.post-summary a.button {
 section.post {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 section.post img.post__header-img {
