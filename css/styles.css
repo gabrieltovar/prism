@@ -70,7 +70,6 @@
     --input-border-width: 1px;
 }
 
-
 @media (min-width: 576px) {
     :root {
         --viewport-horizontal-padding: 1.5rem;
@@ -94,6 +93,12 @@ body.grid-layout {
 
 body.grid-layout > * {
     width: 100%;
+}
+
+section.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -124,16 +129,33 @@ h1 {
     font-size: 2.5rem;
 }
 
-h1.section-title {
-    color: var(--primary-300);
-}
-
 h2 {
     font-size: 2.25rem;
 }
 
+section.post-list h2 {
+    color: var(--primary-400);
+}
+
 h2.post-summary__title {
     font-size: 1.75rem;
+}
+
+h2.trending-grid__top__post__title {
+    font-size: 2rem;
+}
+
+h2.trending-grid__second__post__title {
+    font-size: 1.5rem;
+}
+
+h2.trending-grid__third__post__title {
+    font-size: 1.25rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 }
 
 h3 {
@@ -160,6 +182,10 @@ p {
     line-height: 1.75rem;
 }
 
+p.trending-grid__second__post__text__body {
+    display: none;
+}
+
 @media (min-width: 576px) {
     h1 {
         font-size: 3rem;
@@ -171,6 +197,10 @@ p {
 
     h2.post-summary__title {
         font-size: 2.25rem;
+    }
+
+    p.trending-grid__second__post__text__body {
+        display: block;
     }
 }
 
@@ -341,24 +371,6 @@ header input[type="search"] {
     display: none;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    padding: 0 var(--viewport-horizontal-padding);
-}
-
-main > .main-content {
-    max-width: 900px;
-}
-
-section.post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 700px;
-}
-
-
 @media (min-width: 1024px) {
     header {
         position: fixed;
@@ -368,13 +380,13 @@ section.post-list {
     header > div.header-wrapper {
         flex-direction: row;
         align-items: center;
-        max-width: 1200px;
+        max-width: var(--viewport-max-width);
     }
 
     header a.header-logo {
         line-height: 1rem;
     }
-
+    
     header nav ul {
         justify-content: start;
     }
@@ -383,15 +395,22 @@ section.post-list {
         display: inherit;
         width: 500px;
     }
+}
 
-    main {
-        margin-top: 7rem;
-        padding: 0 1.5rem;
-    }
+main {
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--viewport-horizontal-padding);
+}
 
-    section.post-list {
-        gap: 2rem;
-    }
+section.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+section.post-list.latest {
+    max-width: 700px;
 }
 
 /* Post summary */
@@ -405,16 +424,35 @@ article.post-summary {
     background-color: var(--gray-800);
 }
 
+article.trending-grid__third__post {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
 article.post-summary h2:hover {
     text-decoration-line: underline;
 }
 
-article.post-summary img.post-summary__img {
+img.post-summary__img {
     width: 100%;
     height: 200px;
     vertical-align: middle;
     object-fit: cover;
     border-radius: 8px;
+}
+
+section.trending-grid__top img.post-summary__img {
+    height: 250px;
+}
+
+section.trending-grid__second img.post-summary__img {
+    height: 150px;
+}
+
+section.trending-grid__third img.post-summary__img {
+    width: 64px;
+    height: 64px;
 }
 
 article.post-summary a.button {
@@ -471,6 +509,23 @@ section.post div.post__heading div.post__byline p {
 }
 
 @media (min-width: 1024px) {
+    main {
+        margin-top: 7rem;
+        padding: 0 1.5rem;
+    }
+
+    main > .main-content {
+        max-width: 900px;
+    }
+
+    main > .main-content.trending {
+        max-width: var(--viewport-max-width);
+    }
+    
+    section.post-list {
+        gap: 2rem;
+    }
+
     article.post-summary {
         gap: 1rem;
         padding: 1.5rem;
@@ -492,6 +547,78 @@ section.post div.post__heading div.post__byline p {
     section.post div.post__body {
         gap: 1.75rem;
     }
+    
+    section.post-list.trending-grid {
+        display: grid;
+        grid-template-areas:
+        "top second"
+        "third third";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content;
+    }
+    
+    section.trending-grid__top {
+        grid-area: top;
+        height: 100%;
+    }
+
+    section.trending-grid__top article.post-summary {
+        height: 100%;
+    }
+    
+    section.trending-grid__top article.post-summary img.post-summary__img {
+        height: 300px;
+    }
+
+    section.trending-grid__second {
+        grid-area: second;
+        height: 100%;
+    }
+
+    article.trending-grid__second__post {
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+
+    section.trending-grid__second a.img-link {
+        height: 100%;
+    }
+    
+    section.trending-grid__second img.post-summary__img {
+        width: 200px;
+        height: 100%;
+    }
+
+    section.trending-grid__second div.trending-grid__second__post__text {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    section.trending-grid__second div.trending-grid__second__post__text p {
+        text-overflow: ellipsis;
+    }
+
+    section.trending-grid__third {
+        grid-area: third;
+        flex-direction: row;
+    }
+
+    article.trending-grid__third__post {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    section.trending-grid__third a.img-link {
+        width: 100%;
+    }
+
+    section.trending-grid__third img.post-summary__img {
+        width: 100%;
+        height: 150px;
+    }
 }
 
 /* Pagination */
@@ -500,6 +627,7 @@ div.pagination {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 div.pagination > * {
@@ -526,6 +654,7 @@ footer {
     justify-content: center;
     background-color: var(--gray-700);
     padding: 1rem var(--viewport-horizontal-padding);
+    margin-top: 1.5rem;
 }
 
 footer > div.footer-wrapper {
@@ -586,6 +715,10 @@ iframe.video {
 
 /* Bootstrap overrides */
 
+
+body {
+    line-height: normal;
+}
 
 ul, ol {
     margin: 0;
