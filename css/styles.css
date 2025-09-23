@@ -98,7 +98,7 @@ body.grid-layout > * {
 section.main-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 @media (min-width: 1024px) {
