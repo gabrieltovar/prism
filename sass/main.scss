@@ -1,0 +1,29 @@
+@charset 'utf-8';
+/* Force charset 🍩 */
+
+// Using 7-1 architecture
+// See https://sass-guidelin.es/#architecture
+
+// 1. Vendors
+@use 'vendor-extensions/bootstrap';
+
+// 2. Base
+@use 'base/reset';
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/typography';
+
+// 3. Layout
+@use 'layout/content';
+@use 'layout/footer';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/pagination';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home';
+@use 'pages/post';
+@use 'pages/trending';

@@ -1,0 +1,63 @@
+@use '../utilities' as u;
+
+
+/* Footer */
+
+$background-color: u.get-gray('700');
+$color: u.get-gray('100');
+$horizontal-padding: u.$viewport-horizontal-padding;
+$vertical-padding: 1rem;
+
+$link-height: u.$input-height-small;
+$link-color: u.get-primary-color('100');
+
+.footer {
+  @include u.flex($justify: center);
+
+  margin-top: 1.5rem;
+  background-color: $background-color;
+  padding: $vertical-padding $horizontal-padding;
+  text-align: center;
+
+  &__content {
+    @include u.flex(1rem, column, center);
+
+    max-width: u.$content-max-width;
+    width: 100%;
+    color: $color;
+
+    &__social-icons {
+      @include u.flex(2rem, $justify: center);
+
+      a img {
+        vertical-align: middle;
+        width: 1.5rem;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &__links {
+
+      li {
+        list-style: none;
+
+        a {
+          display: block;
+          align-content: center;
+          font-weight: 500;
+          height: $link-height;
+          color: $link-color;
+
+          &:hover {
+            text-decoration: none;
+            color: u.get-primary-color('500');
+          }
+        }
+      }
+    }
+
+    &__legal {
+      font-size: 0.875rem;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+
+@use 'variables';
+
+// Reset margin and padding
+@mixin reset-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+// Set font for any body content
+@mixin set-body-font($weight: 400, $size: null) {
+  font-family: variables.$body-font-stack;
+  font-weight: $weight;
+  font-style: normal;
+  @if $size {
+    font-size: $size;
+  }
+}
+
+// Set font for headings
+@mixin set-heading-font($weight: 400, $size: null) {
+  font-family: variables.$heading-font-stack;
+  font-weight: $weight;
+  font-style: normal;
+  @if $size {
+    font-size: $size;
+  }
+}
+
+// Configure flex
+@mixin flex($gap: null, $direction: null, $justify: null, $align: null) {
+  display: flex;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+}
+
+// Set width and height of an element
+@mixin size($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+// Basic breakpoint manager
+// Author: Kitty Giraudel
+// See https://sass-guidelin.es/#responsive-web-design-and-breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map.get(variables.$breakpoints, $breakpoint);
+  @if $raw-query {
+    $query: if(
+      meta.type-of($raw-query) == 'string',
+      string.unquoted($raw-query),
+      meta.inspect($raw-query)
+    );
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for "#{$breakpoint}".'
+      + 'Please make sure it is defined in "$breakpoints" map.'
+  }
+}

@@ -1,0 +1,23 @@
+@use '../utilities';
+
+
+/* Grid layout */
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2rem;
+
+    > * {
+      width: 100%;
+    }
+
+  @include utilities.respond-to('md') {
+    gap: 3rem;
+  }
+
+  @include utilities.respond-to('lg') {
+    gap: 5rem;
+  }
+}

@@ -1,0 +1,96 @@
+@use '../utilities';
+
+
+/* Typography: headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include utilities.set-heading-font;
+  
+  color: utilities.get-primary-color('500');
+}
+
+h1 {
+  font-size: 2.5rem;
+
+  @include utilities.respond-to('sm') {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+
+  @include utilities.respond-to('sm') {
+    font-size: 2.5rem;
+  }
+
+  .post-list & {
+    color: utilities.get-primary-color('400');
+  }
+
+  &.post-summary__title {
+    font-size: 1.75rem;
+    
+    @include utilities.respond-to('sm') {
+      font-size: 2.25rem;
+    }
+  }
+
+  .trending-grid__area--top &.trending-grid__area__post__title {
+    font-size: 2rem;
+  }
+  
+  .trending-grid__area--second &.trending-grid__area__post__text__title {
+    font-size: 1.5rem;
+  }
+  
+  .trending-grid__area--third &.trending-grid__area__post__title {
+    font-size: 1.25rem;
+    /* Properties required for line-clamp to work while it's in development 
+    See https://developer.mozilla.org/en-US/docs/Web/CSS/line-clamp */
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+/* Typography: body */
+
+body {
+  @include utilities.set-body-font;
+}
+
+p {
+  line-height: 1.75rem;
+
+  .trending-grid__area--second &.trending-grid__area__post__text__body {
+    display: none;
+    
+    @include utilities.respond-to('sm') {
+      display: block;
+    }
+  }
+}

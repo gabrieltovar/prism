@@ -1,0 +1,57 @@
+@use '../utilities' as u;
+
+
+/* Post page */
+
+.post {
+  @include u.flex(2.5rem, column);
+
+  &__header-img {
+    @include u.size(100%, 250px);
+    
+    object-fit: cover;
+
+    @include u.respond-to('lg') {
+      height: 400px;
+    }
+  }
+
+  &__body {
+    @include u.flex(1.5rem, column);
+
+    @include u.respond-to('lg') {
+      gap: 1.75rem;
+    }
+  }
+
+  &__heading {
+    @include u.flex($direction: column);
+
+    &__date {
+      font-size: .875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: u.get-gray('400');
+    }
+
+    &__byline {
+      @include u.flex(0.5rem);
+
+      margin-top: 0.5rem;
+      align-items: center;
+
+      img {
+        width: 2rem;
+        border-radius: 50%;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.video {
+  aspect-ratio: 16 / 9;
+}

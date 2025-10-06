@@ -1,0 +1,16 @@
+@use '../utilities';
+
+
+/* Content section */
+
+$max-width: 900px;
+
+.main-content {
+  @include utilities.flex(2.5rem, column);
+  
+  main > & {
+    @include utilities.respond-to('lg') {
+      max-width: $max-width;
+    }
+  }
+}
