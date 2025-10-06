@@ -5,21 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRISM</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="grid-layout">
-    <header>
-        <div class="header-wrapper">
-            <a href="./index.html" class="header-logo">PRISM</a>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Latest</a></li>
-                    <li><a href="./pages/trending.html">Trending</a></li>
-                    <li><a href="./pages/about.html">About</a></li>
-                </ul>
-            </nav>
-            <input type="search" class="prism-control" name="search" id="search" placeholder="Search">
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand header-logo" href="#">PRISM
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler" aria-controls="nav-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-toggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Latest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/trending.html">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/about.html">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="button button--secondary button--small" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="main-content latest">
@@ -29,43 +45,44 @@
                     <a href="./pages/post2.html"><img class="post-summary__img" src="./assets/album cover.jpg" alt="The cover to the album Black Hole Superette by hip hop artist Aesop Rock"></a>
                     <a href="./pages/post2.html"><h2 class="post-summary__title">Black Hole Superette: Aesop's latest gem</h2></a>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi maxime ex, nulla facere, asperiores molestiae consequatur qui eveniet voluptatum, cupiditate corporis cum a nam repellat reiciendis debitis voluptates quas veniam dolorum aspernatur. Nihil est et vitae dolorum sunt omnis laborum accusamus dolores molestiae itaque voluptatem, alias ipsam aspernatur eos numquam.</p>
-                    <a class="button outline-button small-button" href="./pages/post2.html">Read more</a>
+                    <a class="button button--secondary button--small" href="./pages/post2.html">Read more</a>
                 </article>
                 <article class="post-summary">
                     <a href="./pages/post1.html"><img class="post-summary__img" src="./assets/switch2.webp" alt="A picture of a Switch 2 box"></a>
                     <a href="./pages/post1.html"><h2 class="post-summary__title">So, how do we feel about the Switch 2?</h2></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend consectetur massa id volutpat. Aliquam erat volutpat. Morbi eget est et orci cursus lobortis sit amet id lorem. Quisque maximus mollis urna, quis lobortis elit blandit sit amet. Maecenas aliquet, risus vitae pharetra tincidunt, est enim auctor nisi, ultricies cursus.</p>
-                    <a class="button outline-button small-button" href="./pages/post1.html">Read more</a>
+                    <a class="button button--secondary button--small" href="./pages/post1.html">Read more</a>
                 </article>
                 <article class="post-summary">
                     <a href="./pages/post0.html"><img class="post-summary__img" src="./assets/prism.jpg" alt="A picture of light refracted by a prism onto a wall"></a>
                     <a href="./pages/post0.html"><h2 class="post-summary__title">Welcome to PRISM!</h2></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolores amet exercitationem eum ipsa vitae illum! Cum eos a hic dolore debitis maiores provident facere magni nihil, est odit harum?</p>
-                    <a class="button outline-button small-button" href="./pages/post0.html">Read more</a>
+                    <a class="button button--secondary button--small" href="./pages/post0.html">Read more</a>
                 </article>
             </section>
             <div class="pagination">
                 <input type="button" value="<<" class="prism-control button icon-button">
                 <input type="button" value="<" class="prism-control button icon-button">
-                <span>Page 1 of 5</span>
+                <span class="pagination__label">Page 1 of 5</span>
                 <input type="button" value=">" class="prism-control button icon-button">
                 <input type="button" value=">>" class="prism-control button icon-button">
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer-wrapper">
-            <div class="social-icons">
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__content__social-icons">
                 <a href="#"><img src="./assets/instagram.svg" alt="Instagram"></a>
                 <a href="#"><img src="./assets/facebook.svg" alt="facebook"></a>
                 <a href="#"><img src="./assets/youtube.svg" alt="YouTube"></a>
             </div>
-            <ul class="links">
+            <ul class="footer__content__links">
                 <li><a href="./pages/about.html">About</a></li>
                 <li><a href="./pages/contact.html">Contact us</a></li>
             </ul>
-            <p class="legal">&#169; Prism 2025</p>
+            <p class="footer__content__legal">&#169; Prism 2025</p>
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

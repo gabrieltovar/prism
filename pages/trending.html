@@ -5,79 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prism</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="grid-layout">
-    <header>
-        <div class="header-wrapper">
-            <a href="../index.html" class="header-logo">PRISM</a>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Latest</a></li>
-                    <li><a href="./trending.html">Trending</a></li>
-                    <li><a href="./about.html">About</a></li>
-                </ul>
-            </nav>
-            <input type="search" class="prism-control" name="search" id="search" placeholder="Search">
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand header-logo" href="../index.html">PRISM
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler" aria-controls="nav-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-toggler">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Latest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+                        <button class="button button--secondary button--small" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="main-content trending">
             <h1 class="section-title">Trending</h1>
             <section class="trending-grid post-list">
-                <section class="trending-grid__top">
-                    <article class="trending-grid__top__post post-summary">
-                        <a href="./post1.html"><img class="post-summary__img" src="../assets/switch2.webp" alt="A picture of a Switch 2 box"></a>
-                        <a href="./post1.html"><h2 class="trending-grid__top__post__title">So, how do we feel about the Switch 2?</h2></a>
+                <section class="trending-grid__area trending-grid__area--top">
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="./post1.html">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/switch2.webp" alt="A picture of a Switch 2 box">
+                        </a>
+                        <a href="./post1.html"><h2 class="trending-grid__area__post__title">So, how do we feel about the Switch 2?</h2></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus, sequi dolores eius delectus sunt aliquid autem quae, eaque cum consectetur, commodi molestiae accusamus. Ipsam dolorum ullam in asperiores non!</p>
                     </article>
                 </section>
-                <section class="trending-grid__second post-list">
-                    <article class="trending-grid__second__post post-summary">
-                        <a class="img-link" href="./post2.html"><img class="post-summary__img" src="../assets/album cover.jpg" alt="The cover to the album Black Hole Superette by hip hop artist Aesop Rock"></a>
-                        <div class="trending-grid__second__post__text">
-                            <a href="./post2.html"><h2 class="trending-grid__second__post__title">Black Hole Superette: Aesop's latest gem</h2></a>
-                            <p class="trending-grid__second__post__text__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni sed ab quaerat ducimus dolore, nam sapiente culpa sequi quo aut!</p>
+                <section class="trending-grid__area trending-grid__area--second post-list">
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="./post2.html">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/album cover.jpg" alt="The cover to the album Black Hole Superette by hip hop artist Aesop Rock"></a>
+                        <div class="trending-grid__area__post__text">
+                            <a href="./post2.html"><h2 class="trending-grid__area__post__text__title">Black Hole Superette: Aesop's latest gem</h2></a>
+                            <p class="trending-grid__area__post__text__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni sed ab quaerat ducimus dolore, nam sapiente culpa sequi quo aut!</p>
                         </div>
                     </article>
-                    <article class="trending-grid__second__post post-summary">
-                        <a class="img-link" href="#"><img class="post-summary__img" src="../assets/c16.jpg" alt="A photo of the Haute42 C16, a 16-button leverless videogame controller"></a>
-                        <div class="trending-grid__second__post__text">
-                            <a href="#"><h2 class="trending-grid__second__post__title">Haute42 C16 review: a button tapper's delight</h2></a>
-                            <p class="trending-grid__second__post__text__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel ut dolorum sequi totam nam quam nesciunt aut rem dicta!</p>
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="#">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/c16.jpg" alt="A photo of the Haute42 C16, a 16-button leverless videogame controller">
+                        </a>
+                        <div class="trending-grid__area__post__text">
+                            <a href="#"><h2 class="trending-grid__area__post__text__title">Haute42 C16 review: a button tapper's delight</h2></a>
+                            <p class="trending-grid__area__post__text__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel ut dolorum sequi totam nam quam nesciunt aut rem dicta!</p>
                         </div>
                     </article>
                 </section>
-                <section class="trending-grid__third post-list">
-                    <article class="trending-grid__third__post post-summary">
-                        <a class="img-link" href="#"><img class="post-summary__img" src="../assets/electrics.jpg" alt="An illustration of Vi from 2XKO charging an electric punch"></a>
-                        <a href="#"><h2 class="trending-grid__third__post__title">The joy of Vi's electrics in 2XKO</h2></a>
+                <section class="trending-grid__area trending-grid__area--third post-list">
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="#">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/electrics.jpg" alt="An illustration of Vi from 2XKO charging an electric punch">
+                        </a>
+                        <a href="#"><h2 class="trending-grid__area__post__title">The joy of Vi's electrics in 2XKO</h2></a>
                     </article>
-                    <article class="trending-grid__third__post post-summary">
-                        <a class="img-link" href="#"><img class="post-summary__img" src="../assets/silksong-combat.webp" alt="A screenshot Hollow Knight: Silksong featuring Hornet in the middle of a fight against multiple enemies"></a>
-                        <a href="#"><h2 class="trending-grid__third__post__title">The ugly side of Silksong's combat design</h2></a>
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="#">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/silksong-combat.webp" alt="A screenshot Hollow Knight: Silksong featuring Hornet in the middle of a fight against multiple enemies">
+                        </a>
+                        <a href="#"><h2 class="trending-grid__area__post__title">The ugly side of Silksong's combat design</h2></a>
                     </article>
-                    <article class="trending-grid__third__post post-summary">
-                        <a class="img-link" href="#"><img class="post-summary__img" src="../assets/renoir.webp" alt="A close-up screenshot of a somber Renoir from Clair Obscur: Expedition 33"></a>
-                        <a href="#"><h2 class="trending-grid__third__post__title">Turning 33 in the year Clair Obscur: Expedition 33 came out</h2></a>
+                    <article class="trending-grid__area__post post-summary">
+                        <a class="trending-grid__area__post__img-wrapper" href="#">
+                            <img class="trending-grid__area__post__img-wrapper__img post-summary__img" src="../assets/renoir.webp" alt="A close-up screenshot of a somber Renoir from Clair Obscur: Expedition 33">
+                        </a>
+                        <a href="#"><h2 class="trending-grid__area__post__title">Turning 33 in the year Clair Obscur: Expedition 33 came out</h2></a>
                     </article>
                 </section>
             </section>
         </section>
     </main>
-    <footer>
-        <div class="footer-wrapper">
-            <div class="social-icons">
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__content__social-icons">
                 <a href="#"><img src="../assets/instagram.svg" alt="Instagram"></a>
                 <a href="#"><img src="../assets/facebook.svg" alt="facebook"></a>
                 <a href="#"><img src="../assets/youtube.svg" alt="YouTube"></a>
             </div>
-            <ul class="links">
+            <ul class="footer__content__links">
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./contact.html">Contact us</a></li>
             </ul>
-            <p class="legal">&#169; Prism 2025</p>
+            <p class="footer__content__legal">&#169; Prism 2025</p>
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

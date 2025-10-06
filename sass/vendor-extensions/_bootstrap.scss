@@ -1,0 +1,110 @@
+@use '../utilities' as u;
+
+
+/* Bootstrap overrides */
+
+$body-color: u.get-primary-color('200');
+$body-background-color: u.get-gray('900');
+$nav-link-font-weight: 500;
+$nav-link-color: u.get-primary-color('200');
+$nav-link-color-hovered: u.get-primary-color('500');
+$border-color: u.get-gray('700');
+$border-color-focused: u.get-primary-color('500');
+$secondary-color: u.get-gray('400');
+$logo-color: u.get-primary-color('500');
+
+body {
+  line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include u.reset-spacing;
+  line-height: normal;
+}
+
+ul, ol {
+  @include u.reset-spacing;
+}
+
+p {
+  @include u.reset-spacing;
+}
+
+.form-select,
+.form-control {
+  --bs-body-color: #{$body-color};
+  --bs-body-bg: #{$body-background-color};
+  --bs-border-color: #{$border-color};
+  --bs-secondary-color: #{$secondary-color};
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: $border-color-focused;
+    box-shadow: 0 0 0 .25rem hsla(332, 100%, 78%, 0.25);
+}
+
+.form-text {
+  --bs-secondary-color: #{$secondary-color};
+}
+
+.navbar {
+  padding: 0.5rem u.get-content-horizontal-padding('sm');
+
+  @include u.respond-to('md') {
+    padding: 0.5rem u.get-content-horizontal-padding('md');
+  }
+  
+  @include u.respond-to('lg') {
+    padding: 0.5rem u.get-content-horizontal-padding('lg');
+  }
+
+  .container-fluid {
+    max-width: u.$content-max-width;
+    padding: 0;
+    gap: 0.5rem;
+
+    .navbar-brand {
+      // TODO: replace with vector logo
+      --bs-navbar-brand-font-size: 2rem;
+      --bs-navbar-brand-color: #{$logo-color};
+      --bs-navbar-brand-hover-color: #{$logo-color};
+      font-family: 'Rock 3D', system-ui;
+      font-weight: 400;
+      line-height: 2rem;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        --bs-navbar-active-color: #{$nav-link-color};
+        --bs-nav-link-color: #{$nav-link-color};
+        --bs-nav-link-hover-color: #{$nav-link-color-hovered};
+        --bs-nav-link-font-weight: #{$nav-link-font-weight};
+        gap: 0.5rem;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+
+        @include u.respond-to('lg') {
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      form {
+        gap: 0.5rem;
+      }
+    }
+  }
+}

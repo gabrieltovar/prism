@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+@use 'variables';
+
+
+// Primary color getter
+@function get-primary-color($name) {
+  @return map.get(variables.$color-primary, $name);
+}
+
+//Gray getter
+@function get-gray($name) {
+  @return map.get(variables.$gray, $name);
+}
+
+// Get horizontal padding value for a given breakpoint
+@function get-content-horizontal-padding($size) {
+  @return map.get(variables.$content-horizontal-padding, $size);
+}

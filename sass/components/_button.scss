@@ -1,0 +1,81 @@
+@use '../utilities' as u;
+
+
+$button-height: u.$input-height;
+$button-height-small: u.$input-height-small;
+$button-background-color: u.get-primary-color('500');
+$button-background-color-hovered: u.get-primary-color('400');
+$button-background-color-pressed: u.get-primary-color('300');
+$button-color: u.get-gray('900');
+$button-border-radius: u.$border-radius-s;
+
+$secondary-button-background-color: transparent;
+$secondary-button-backgroud-color-hovered: u.get-primary-color('800');
+$secondary-button-backgroud-color-pressed: u.get-primary-color('900');
+$secondary-button-color: u.get-primary-color('500');
+$secondary-button-border-color: u.get-primary-color('500');
+$secondary-button-border-width: 1px;
+
+$icon-button-width: u.$input-height-small;
+$icon-button-height: u.$input-height-small;
+
+/* Primary button */
+.button {
+  $secondary-selector: #{&}--secondary;
+  @include u.set-body-font(900, 1.125rem);
+  height: $button-height;
+  border-style: none;
+  border-radius: $button-border-radius;
+  background-color: $button-background-color;
+  padding: 0 1rem;
+  color: $button-color;
+  cursor: pointer;
+  transition: all 150ms;
+
+  &:hover {
+    background-color: $button-background-color-hovered;
+  }
+
+  &:active {
+    background-color: $button-background-color-pressed;
+  }
+
+  &--small {
+    font-size: 1rem;
+    height: $button-height-small;
+  }
+
+}
+
+/* Secondary button */
+.button--secondary {
+  border: $secondary-button-border-color $secondary-button-border-width solid;
+  background-color: $secondary-button-background-color;
+  color: $secondary-button-color;
+
+  &:hover {
+    background-color: $secondary-button-backgroud-color-hovered;
+  }
+
+  &:active {
+    background-color: $secondary-button-backgroud-color-pressed;
+  }
+}
+
+/* Adjustments specific to link buttons */
+a.button {
+  display: block;
+  align-content: center;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Icon button */
+.icon-button {
+  width: $icon-button-width;
+  height: $icon-button-height;
+  padding: 0;
+}

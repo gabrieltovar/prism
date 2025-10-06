@@ -1,0 +1,39 @@
+@use '../utilities' as u;
+
+
+/* Base styles */
+
+$body-background-color: u.get-gray('900');
+$body-color: u.get-primary-color('200');
+
+$link-font-weight: 900;
+$link-color: u.get-primary-color('500');
+
+body {
+  background-color: $body-background-color;
+  color: $body-color;
+}
+
+main {
+  @include u.flex($justify: center);
+  
+  padding: 0 u.get-content-horizontal-padding('sm');
+
+  @include u.respond-to('md') {
+    padding: 0 u.get-content-horizontal-padding('md');
+  }
+  
+  @include u.respond-to('lg') {
+    padding: 0 u.get-content-horizontal-padding('lg');
+  }
+}
+
+a {
+  font-weight: $link-font-weight;
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
