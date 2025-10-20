@@ -117,6 +117,7 @@ body {
 main {
   display: flex;
   justify-content: center;
+  min-height: 100%;
   padding: 0 1rem;
 }
 @media (min-width: 768px) {
@@ -296,8 +297,10 @@ p {
 .grid-layout {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
   gap: 2rem;
+  min-height: 100vh;
 }
 .grid-layout > * {
   width: 100%;
