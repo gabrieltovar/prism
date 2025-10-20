@@ -16,8 +16,12 @@ $secondary-button-color: u.get-primary-color('500');
 $secondary-button-border-color: u.get-primary-color('500');
 $secondary-button-border-width: 1px;
 
-$icon-button-width: u.$input-height-small;
-$icon-button-height: u.$input-height-small;
+$icon-button-width: u.$input-height;
+$icon-button-height: u.$input-height;
+$icon-button-width-small: u.$input-height-small;
+$icon-button-height-small: u.$input-height-small;
+$icon-button-icon-size: 1.5rem;
+$icon-button-icon-color: u.get-gray('900');
 
 /* Primary button */
 .button {
@@ -44,7 +48,6 @@ $icon-button-height: u.$input-height-small;
     font-size: 1rem;
     height: $button-height-small;
   }
-
 }
 
 /* Secondary button */
@@ -71,11 +74,33 @@ a.button {
   &:hover {
     text-decoration: none;
   }
+
+  &.button--icon {
+    width: $icon-button-width;
+  }
 }
 
 /* Icon button */
-.icon-button {
+.button--icon {
   width: $icon-button-width;
   height: $icon-button-height;
   padding: 0;
+  justify-items: center;
+
+  &.button--small {
+    width: $icon-button-width-small;
+    height: $icon-button-height-small;
+  }
+
+  img {
+    display: block;
+    width: $icon-button-icon-size;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(30%)
+            hue-rotate(235deg) brightness(96%) contrast(92%);
+  }
+
+  &.button--secondary img {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(40%) saturate(921%)
+            hue-rotate(291deg) brightness(105%) contrast(101%);
+  }
 }
