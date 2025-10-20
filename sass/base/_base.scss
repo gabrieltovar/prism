@@ -17,6 +17,7 @@ body {
 main {
   @include u.flex($justify: center);
   
+  min-height: 100%;
   padding: 0 u.get-content-horizontal-padding('sm');
 
   @include u.respond-to('md') {
