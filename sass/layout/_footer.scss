@@ -10,6 +10,7 @@ $vertical-padding: 1rem;
 
 $link-height: u.$input-height-small;
 $link-color: u.get-primary-color('100');
+$link-color-hovered: u.get-primary-color('500');
 
 .footer {
   @include u.flex($justify: center);
@@ -29,15 +30,17 @@ $link-color: u.get-primary-color('100');
     &__social-icons {
       @include u.flex(2rem, $justify: center);
 
-      a img {
-        vertical-align: middle;
-        width: 1.5rem;
-        filter: brightness(0) invert(1);
+      .button.button--icon {
+        border-color: $link-color;
+        border-radius: 50%;
+
+        img {
+          filter: brightness(0) invert(1);
+        }
       }
     }
 
     &__links {
-
       li {
         list-style: none;
 
@@ -50,7 +53,7 @@ $link-color: u.get-primary-color('100');
 
           &:hover {
             text-decoration: none;
-            color: u.get-primary-color('500');
+            color: $link-color-hovered;
           }
         }
       }
