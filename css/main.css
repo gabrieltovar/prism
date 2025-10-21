@@ -251,13 +251,13 @@ p {
   justify-content: center;
   margin-top: 1.5rem;
   background-color: hsl(0, 0%, 35%);
-  padding: 1rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 .footer__content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   max-width: 1200px;
   width: 100%;
