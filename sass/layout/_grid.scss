@@ -1,5 +1,4 @@
-@use '../utilities';
-
+@use "../utilities";
 
 /* Grid layout */
 
@@ -15,11 +14,11 @@
     width: 100%;
   }
 
-  @include utilities.respond-to('md') {
+  @include utilities.respond-to("md") {
     gap: 3rem;
   }
 
-  @include utilities.respond-to('lg') {
+  @include utilities.respond-to("lg") {
     gap: 5rem;
   }
 }

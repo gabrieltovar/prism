@@ -1,9 +1,8 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 /* Header */
 
-$background-color: u.get-gray('800');
+$background-color: u.get-gray("800");
 
 header {
   background-color: $background-color;

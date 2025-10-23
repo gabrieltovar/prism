@@ -1,17 +1,16 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 /* Bootstrap overrides */
 
-$body-color: u.get-primary-color('200');
-$body-background-color: u.get-gray('900');
+$body-color: u.get-primary-color("200");
+$body-background-color: u.get-gray("900");
 $nav-link-font-weight: 500;
-$nav-link-color: u.get-primary-color('200');
-$nav-link-color-hovered: u.get-primary-color('500');
-$border-color: u.get-gray('700');
-$border-color-focused: u.get-primary-color('500');
-$secondary-color: u.get-gray('400');
-$logo-color: u.get-primary-color('500');
+$nav-link-color: u.get-primary-color("200");
+$nav-link-color-hovered: u.get-primary-color("500");
+$border-color: u.get-gray("700");
+$border-color-focused: u.get-primary-color("500");
+$secondary-color: u.get-gray("400");
+$logo-color: u.get-primary-color("500");
 
 body {
   line-height: normal;
@@ -27,7 +26,8 @@ h6 {
   line-height: normal;
 }
 
-ul, ol {
+ul,
+ol {
   @include u.reset-spacing;
 }
 
@@ -45,8 +45,8 @@ p {
 
 .form-select:focus,
 .form-control:focus {
-    border-color: $border-color-focused;
-    box-shadow: 0 0 0 .25rem hsla(332, 100%, 78%, 0.25);
+  border-color: $border-color-focused;
+  box-shadow: 0 0 0 0.25rem hsla(332, 100%, 78%, 0.25);
 }
 
 .form-text {
@@ -54,14 +54,14 @@ p {
 }
 
 .navbar {
-  padding: 0.5rem u.get-content-horizontal-padding('sm');
+  padding: 0.5rem u.get-content-horizontal-padding("sm");
 
-  @include u.respond-to('md') {
-    padding: 0.5rem u.get-content-horizontal-padding('md');
+  @include u.respond-to("md") {
+    padding: 0.5rem u.get-content-horizontal-padding("md");
   }
-  
-  @include u.respond-to('lg') {
-    padding: 0.5rem u.get-content-horizontal-padding('lg');
+
+  @include u.respond-to("lg") {
+    padding: 0.5rem u.get-content-horizontal-padding("lg");
   }
 
   .container-fluid {
@@ -74,7 +74,7 @@ p {
       --bs-navbar-brand-font-size: 2rem;
       --bs-navbar-brand-color: #{$logo-color};
       --bs-navbar-brand-hover-color: #{$logo-color};
-      font-family: 'Rock 3D', system-ui;
+      font-family: "Rock 3D", system-ui;
       font-weight: 400;
       line-height: 2rem;
 
@@ -93,7 +93,7 @@ p {
         margin-right: auto;
         margin-bottom: 0.5rem;
 
-        @include u.respond-to('lg') {
+        @include u.respond-to("lg") {
           margin-bottom: 0;
         }
 

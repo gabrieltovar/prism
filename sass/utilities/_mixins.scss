@@ -1,8 +1,8 @@
-@use 'sass:map';
-@use 'sass:meta';
-@use 'sass:string';
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
 
-@use 'variables';
+@use "variables";
 
 // Reset margin and padding
 @mixin reset-spacing {
@@ -60,7 +60,7 @@
   $raw-query: map.get(variables.$breakpoints, $breakpoint);
   @if $raw-query {
     $query: if(
-      meta.type-of($raw-query) == 'string',
+      meta.type-of($raw-query) == "string",
       string.unquoted($raw-query),
       meta.inspect($raw-query)
     );
@@ -69,6 +69,6 @@
     }
   } @else {
     @error 'No value found for "#{$breakpoint}".'
-      + 'Please make sure it is defined in "$breakpoints" map.'
+      + 'Please make sure it is defined in "$breakpoints" map.';
   }
 }

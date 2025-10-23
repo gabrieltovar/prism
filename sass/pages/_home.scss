@@ -1,10 +1,10 @@
-@use '../utilities' as u;
+@use "../utilities" as u;
 
 /* Home */
 
 $main-content-max-width: 700px;
 
-$post-summary-background-color: u.get-gray('800');
+$post-summary-background-color: u.get-gray("800");
 
 .main-content {
   &.latest {
@@ -14,19 +14,19 @@ $post-summary-background-color: u.get-gray('800');
 
 .post-list {
   @include u.flex(1.25rem, column);
-  @include u.respond-to('lg') {
+  @include u.respond-to("lg") {
     gap: 2rem;
   }
 }
 
 .post-summary {
-  @include u.flex(.5rem, column);
-  
+  @include u.flex(0.5rem, column);
+
   background-color: $post-summary-background-color;
   border-radius: 1rem;
   padding: 1rem;
 
-  @include u.respond-to('lg') {
+  @include u.respond-to("lg") {
     gap: 1rem;
     padding: 1.5rem;
   }
@@ -38,7 +38,7 @@ $post-summary-background-color: u.get-gray('800');
     vertical-align: middle;
     border-radius: 8px;
 
-    @include u.respond-to('lg') {
+    @include u.respond-to("lg") {
       height: 300px;
     }
   }
@@ -51,7 +51,7 @@ $post-summary-background-color: u.get-gray('800');
     display: none;
     margin-top: 1rem;
 
-    @include u.respond-to('lg') {
+    @include u.respond-to("lg") {
       display: block;
       margin-top: 1rem;
     }
