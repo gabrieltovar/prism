@@ -1,13 +1,12 @@
-@use 'sass:list';
-@use 'sass:map';
-@use 'sass:meta';
-
+@use "sass:list";
+@use "sass:map";
+@use "sass:meta";
 
 // Font stack for body text
-$body-font-stack: 'Quicksand', 'Helvetica', 'Tahoma', sans-serif;
+$body-font-stack: "Quicksand", "Helvetica", "Tahoma", sans-serif;
 
 // Font stack for headings
-$heading-font-stack: 'Belanosima', 'Helvetica', 'Tahoma', sans-serif;
+$heading-font-stack: "Belanosima", "Helvetica", "Tahoma", sans-serif;
 
 // Layout settings
 $viewport-horizontal-padding: 1rem;
@@ -18,45 +17,41 @@ $input-height: 3rem;
 $input-height-small: 2.5rem;
 
 // Border radius tokens
-$border-radius-xs: .125rem;
-$border-radius-s: .25rem;
-$border-radius-m: .5rem;
-$border-radius-l: .75rem;
-$border-radius-xl: .1rem;
+$border-radius-xs: 0.125rem;
+$border-radius-s: 0.25rem;
+$border-radius-m: 0.5rem;
+$border-radius-l: 0.75rem;
+$border-radius-xl: 0.1rem;
 $border-radius-xxl: 1.5rem;
 
 // Primary color palette
 $color-primary: (
-  '100': hsl(332, 100%, 98%),
-  '200': hsl(332, 100%, 94%),
-  '300': hsl(332, 100%, 92%),
-  '400': hsl(332, 95%, 86%),
-  '500': hsl(332, 100%, 78%),
-  '600': hsl(332, 91%, 69%),
-  '700': hsl(332, 59%, 47%),
-  '800': hsl(332, 66%, 30%),
-  '900': hsl(332, 86%, 14%),
+  "100": hsl(332, 100%, 98%),
+  "200": hsl(332, 100%, 94%),
+  "300": hsl(332, 100%, 92%),
+  "400": hsl(332, 95%, 86%),
+  "500": hsl(332, 100%, 78%),
+  "600": hsl(332, 91%, 69%),
+  "700": hsl(332, 59%, 47%),
+  "800": hsl(332, 66%, 30%),
+  "900": hsl(332, 86%, 14%),
 );
 
 // Gray palette
 $gray: (
-  '100': hsl(0, 0%, 100%),
-  '200': hsl(0, 0%, 92%),
-  '300': hsl(0, 0%, 82%),
-  '400': hsl(0, 0%, 71%),
-  '500': hsl(0, 0%, 58%),
-  '600': hsl(0, 0%, 45%),
-  '700': hsl(0, 0%, 35%),
-  '800': hsl(0, 0%, 27%),
-  '900': hsl(0, 0%, 21%),
+  "100": hsl(0, 0%, 100%),
+  "200": hsl(0, 0%, 92%),
+  "300": hsl(0, 0%, 82%),
+  "400": hsl(0, 0%, 71%),
+  "500": hsl(0, 0%, 58%),
+  "600": hsl(0, 0%, 45%),
+  "700": hsl(0, 0%, 35%),
+  "800": hsl(0, 0%, 27%),
+  "900": hsl(0, 0%, 21%),
 );
 
 // Viewport sizes
-$viewport-size-labels: (
-  'sm',
-  'md',
-  'lg',
-);
+$viewport-size-labels: ("sm", "md", "lg");
 
 // Private helper function to improve readability
 @function get-size-label($i) {
@@ -65,9 +60,15 @@ $viewport-size-labels: (
 
 // Breakpoints
 $breakpoints: (
-  get-size-label(1): (min-width: 576px),
-  get-size-label(2): (min-width: 768px),
-  get-size-label(3): (min-width: 992px),
+  get-size-label(1): (
+    min-width: 576px,
+  ),
+  get-size-label(2): (
+    min-width: 768px,
+  ),
+  get-size-label(3): (
+    min-width: 992px,
+  ),
 );
 
 // Horizontal padding values for content for each breakpoint

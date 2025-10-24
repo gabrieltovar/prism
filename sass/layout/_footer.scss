@@ -1,16 +1,15 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 /* Footer */
 
-$background-color: u.get-gray('700');
-$color: u.get-gray('100');
+$background-color: u.get-gray("700");
+$color: u.get-gray("100");
 $horizontal-padding: u.$viewport-horizontal-padding;
 $vertical-padding: 3rem;
 
 $link-height: u.$input-height-small;
-$link-color: u.get-primary-color('100');
-$link-color-hovered: u.get-primary-color('500');
+$link-color: u.get-primary-color("100");
+$link-color-hovered: u.get-primary-color("500");
 
 .footer {
   @include u.flex($justify: center);

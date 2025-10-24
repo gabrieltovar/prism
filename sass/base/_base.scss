@@ -1,13 +1,12 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 /* Base styles */
 
-$body-background-color: u.get-gray('900');
-$body-color: u.get-primary-color('200');
+$body-background-color: u.get-gray("900");
+$body-color: u.get-primary-color("200");
 
 $link-font-weight: 900;
-$link-color: u.get-primary-color('500');
+$link-color: u.get-primary-color("500");
 
 body {
   background-color: $body-background-color;
@@ -16,16 +15,16 @@ body {
 
 main {
   @include u.flex($justify: center);
-  
-  min-height: 100%;
-  padding: 0 u.get-content-horizontal-padding('sm');
 
-  @include u.respond-to('md') {
-    padding: 0 u.get-content-horizontal-padding('md');
+  min-height: 100%;
+  padding: 0 u.get-content-horizontal-padding("sm");
+
+  @include u.respond-to("md") {
+    padding: 0 u.get-content-horizontal-padding("md");
   }
-  
-  @include u.respond-to('lg') {
-    padding: 0 u.get-content-horizontal-padding('lg');
+
+  @include u.respond-to("lg") {
+    padding: 0 u.get-content-horizontal-padding("lg");
   }
 }
 

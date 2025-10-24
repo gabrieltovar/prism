@@ -1,19 +1,18 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 $button-height: u.$input-height;
 $button-height-small: u.$input-height-small;
-$button-background-color: u.get-primary-color('500');
-$button-background-color-hovered: u.get-primary-color('400');
-$button-background-color-pressed: u.get-primary-color('300');
-$button-color: u.get-gray('900');
+$button-background-color: u.get-primary-color("500");
+$button-background-color-hovered: u.get-primary-color("400");
+$button-background-color-pressed: u.get-primary-color("300");
+$button-color: u.get-gray("900");
 $button-border-radius: u.$border-radius-s;
 
 $secondary-button-background-color: transparent;
-$secondary-button-backgroud-color-hovered: u.get-primary-color('800');
-$secondary-button-backgroud-color-pressed: u.get-primary-color('900');
-$secondary-button-color: u.get-primary-color('500');
-$secondary-button-border-color: u.get-primary-color('500');
+$secondary-button-backgroud-color-hovered: u.get-primary-color("800");
+$secondary-button-backgroud-color-pressed: u.get-primary-color("900");
+$secondary-button-color: u.get-primary-color("500");
+$secondary-button-border-color: u.get-primary-color("500");
 $secondary-button-border-width: 1px;
 
 $icon-button-width: u.$input-height;
@@ -21,7 +20,7 @@ $icon-button-height: u.$input-height;
 $icon-button-width-small: u.$input-height-small;
 $icon-button-height-small: u.$input-height-small;
 $icon-button-icon-size: 1.5rem;
-$icon-button-icon-color: u.get-gray('900');
+$icon-button-icon-color: u.get-gray("900");
 
 /* Primary button */
 .button {
@@ -96,11 +95,11 @@ a.button {
     display: block;
     width: $icon-button-icon-size;
     filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(30%)
-            hue-rotate(235deg) brightness(96%) contrast(92%);
+      hue-rotate(235deg) brightness(96%) contrast(92%);
   }
 
   &.button--secondary img {
     filter: brightness(0) saturate(100%) invert(72%) sepia(40%) saturate(921%)
-            hue-rotate(291deg) brightness(105%) contrast(101%);
+      hue-rotate(291deg) brightness(105%) contrast(101%);
   }
 }

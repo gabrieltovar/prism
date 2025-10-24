@@ -17,7 +17,8 @@ h6 {
   line-height: normal;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }

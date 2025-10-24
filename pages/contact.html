@@ -1,91 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A contact form that allows users to submit suggestions or concerns to the author of the PRISM blog.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A contact form that allows users to submit suggestions or concerns to the author of the PRISM blog."
+    />
     <title>Contact us - PRISM</title>
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css">
-</head>
-<body class="grid-layout">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="grid-layout">
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand header-logo" href="../index.html">PRISM
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler" aria-controls="nav-toggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav-toggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Latest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./trending.html">Trending</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">About</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="button button--secondary button--small" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand header-logo" href="../index.html">PRISM </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav-toggler"
+            aria-controls="nav-toggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav-toggler">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Latest</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./trending.html">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="button button--secondary button--small"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="main-content col-12">
-            <h1>What can we help you with?</h1>
-            <form action="">
-                <fieldset data-bs-theme="dark">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" id="name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Category</label>
-                        <select name="category" class="form-select" id="category">
-                            <option value="submission">Submit a post</option>
-                            <option value="suggestion">Suggestion</option>
-                            <option value="complaint">Complaint</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea name="message" class="form-control" id="message" aria-describedby="message-help"></textarea>
-                        <div class="form-text" id="message-help">
-                            Be as descriptive as possible so we can better review your submission
-                        </div>
-                    </div>
-                    <input type="button" class="button" value="Submit">
-                </fieldset>
-            </form>
-        </section>
+      <section class="main-content col-12">
+        <h1>What can we help you with?</h1>
+        <form action="">
+          <fieldset data-bs-theme="dark">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <select name="category" class="form-select" id="category">
+                <option value="submission">Submit a post</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                name="message"
+                class="form-control"
+                id="message"
+                aria-describedby="message-help"
+              ></textarea>
+              <div class="form-text" id="message-help">
+                Be as descriptive as possible so we can better review your
+                submission
+              </div>
+            </div>
+            <input type="button" class="button" value="Submit" />
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer class="footer">
-        <div class="footer__content">
-            <div class="footer__content__social-icons">
-                <a href="https://www.instagram.com" target="_blank" class="button button--secondary button--icon"><img src="../assets/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com" target="_blank" class="button button--secondary button--icon"><img src="../assets/facebook.svg" alt="facebook"></a>
-                <a href="https://www.youtube.com" target="_blank" class="button button--secondary button--icon"><img src="../assets/youtube.svg" alt="YouTube"></a>
-            </div>
-            <ul class="footer__content__links">
-                <li><a href="./about.html">About</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-            <p class="footer__content__legal">&#169; Prism 2025</p>
+      <div class="footer__content">
+        <div class="footer__content__social-icons">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="../assets/instagram.svg" alt="Instagram"
+          /></a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="../assets/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="../assets/youtube.svg" alt="YouTube"
+          /></a>
         </div>
+        <ul class="footer__content__links">
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+        <p class="footer__content__legal">&#169; Prism 2025</p>
+      </div>
     </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
 </html>

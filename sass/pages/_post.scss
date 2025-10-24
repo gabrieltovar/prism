@@ -1,5 +1,4 @@
-@use '../utilities' as u;
-
+@use "../utilities" as u;
 
 /* Post page */
 
@@ -8,10 +7,10 @@
 
   &__header-img {
     @include u.size(100%, 250px);
-    
+
     object-fit: cover;
 
-    @include u.respond-to('lg') {
+    @include u.respond-to("lg") {
       height: 400px;
     }
   }
@@ -19,7 +18,7 @@
   &__body {
     @include u.flex(1.5rem, column);
 
-    @include u.respond-to('lg') {
+    @include u.respond-to("lg") {
       gap: 1.75rem;
     }
   }
@@ -28,10 +27,10 @@
     @include u.flex($direction: column);
 
     &__date {
-      font-size: .875rem;
+      font-size: 0.875rem;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: u.get-gray('400');
+      color: u.get-gray("400");
     }
 
     &__byline {

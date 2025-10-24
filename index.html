@@ -1,89 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The main feed for Gabriel Tovar's art and entertainment blog.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The main feed for Gabriel Tovar's art and entertainment blog."
+    />
     <title>Latest - PRISM</title>
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body class="grid-layout">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="grid-layout">
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand header-logo" href="#">PRISM
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler" aria-controls="nav-toggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav-toggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Latest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/trending.html">Trending</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/about.html">About</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="button button--secondary button--small" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand header-logo" href="#">PRISM </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav-toggler"
+            aria-controls="nav-toggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav-toggler">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Latest</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/trending.html">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/about.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="button button--secondary button--small"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="main-content latest">
-            <h1 class="section-title">Latest articles</h1>
-            <section class="post-list">
-                <article class="post-summary">
-                    <a href="./pages/post2.html"><img class="post-summary__img" src="./assets/switch2.webp" alt="A Switch 2 videogame console box."></a>
-                    <a href="./pages/post2.html"><h2 class="post-summary__title">So, how do we feel about the Switch 2?</h2></a>
-                    <p>For me, it was a long 7 years of watching the Switch from afar. Nintendo's titles are (still) some of the few respites in the AAA field where you can find joy-driven design, uncontaminated with cynical live service nonsense. But, that poor Tegra machine buckled at the knees, dramatically and often. It was simply unfit for the task. That's why I've been excited about this new release, even if it is a refresh and not a reinvention. Just how much better is this thing?</p>
-                    <a class="button button--secondary button--small" href="./pages/post2.html">Read more</a>
-                </article>
-                <article class="post-summary">
-                    <a href="./pages/post1.html"><img class="post-summary__img" src="./assets/album cover.jpg" alt="The cover to the album Black Hole Superette, featuring the facade of a convenience store."></a>
-                    <a href="./pages/post1.html"><h2 class="post-summary__title">Black Hole Superette: Aesop's latest gem</h2></a>
-                    <p>I was happiliy surprised when I heard that Aesop Rock was going to release another album this May. It hasn't even been 2 years since Integrated Tech Solutions! Impressively, this comes at no cost to any aspect of its production: lyrics, concepts and beats all dripping in that special Aes sauce.</p>
-                    <a class="button button--secondary button--small" href="./pages/post1.html">Read more</a>
-                </article>
-                <article class="post-summary">
-                    <a href="./pages/post0.html"><img class="post-summary__img" src="./assets/prism.jpg" alt="Light refracted by a prism onto a wall in a dark room."></a>
-                    <a href="./pages/post0.html"><h2 class="post-summary__title">Welcome to PRISM!</h2></a>
-                    <p>This is my personal blog. I imagine it'll largely be about my hobbies: videogames, film, music, tabletop and some related gadgetry. However, life insists upon itself, so who knows what else you might find... go bravely with Tyr!</p>
-                    <a class="button button--secondary button--small" href="./pages/post0.html">Read more</a>
-                </article>
-            </section>
-            <div class="pagination">
-                <input type="button" value="<<" class="prism-control button button--icon button--small">
-                <input type="button" value="<" class="prism-control button button--icon button--small">
-                <span class="pagination__label">Page 1 of 5</span>
-                <input type="button" value=">" class="prism-control button button--icon button--small">
-                <input type="button" value=">>" class="prism-control button button--icon button--small">
-            </div>
+      <section class="main-content latest">
+        <h1 class="section-title">Latest articles</h1>
+        <section class="post-list">
+          <article class="post-summary">
+            <a href="./pages/post2.html"
+              ><img
+                class="post-summary__img"
+                src="./assets/switch2.webp"
+                alt="A Switch 2 videogame console box."
+            /></a>
+            <a href="./pages/post2.html"
+              ><h2 class="post-summary__title">
+                So, how do we feel about the Switch 2?
+              </h2></a
+            >
+            <p>
+              For me, it was a long 7 years of watching the Switch from afar.
+              Nintendo's titles are (still) some of the few respites in the AAA
+              field where you can find joy-driven design, uncontaminated with
+              cynical live service nonsense. But, that poor Tegra machine
+              buckled at the knees, dramatically and often. It was simply unfit
+              for the task. That's why I've been excited about this new release,
+              even if it is a refresh and not a reinvention. Just how much
+              better is this thing?
+            </p>
+            <a
+              class="button button--secondary button--small"
+              href="./pages/post2.html"
+              >Read more</a
+            >
+          </article>
+          <article class="post-summary">
+            <a href="./pages/post1.html"
+              ><img
+                class="post-summary__img"
+                src="./assets/album cover.jpg"
+                alt="The cover to the album Black Hole Superette, featuring the facade of a convenience store."
+            /></a>
+            <a href="./pages/post1.html"
+              ><h2 class="post-summary__title">
+                Black Hole Superette: Aesop's latest gem
+              </h2></a
+            >
+            <p>
+              I was happiliy surprised when I heard that Aesop Rock was going to
+              release another album this May. It hasn't even been 2 years since
+              Integrated Tech Solutions! Impressively, this comes at no cost to
+              any aspect of its production: lyrics, concepts and beats all
+              dripping in that special Aes sauce.
+            </p>
+            <a
+              class="button button--secondary button--small"
+              href="./pages/post1.html"
+              >Read more</a
+            >
+          </article>
+          <article class="post-summary">
+            <a href="./pages/post0.html"
+              ><img
+                class="post-summary__img"
+                src="./assets/prism.jpg"
+                alt="Light refracted by a prism onto a wall in a dark room."
+            /></a>
+            <a href="./pages/post0.html"
+              ><h2 class="post-summary__title">Welcome to PRISM!</h2></a
+            >
+            <p>
+              This is my personal blog. I imagine it'll largely be about my
+              hobbies: videogames, film, music, tabletop and some related
+              gadgetry. However, life insists upon itself, so who knows what
+              else you might find... go bravely with Tyr!
+            </p>
+            <a
+              class="button button--secondary button--small"
+              href="./pages/post0.html"
+              >Read more</a
+            >
+          </article>
         </section>
+        <div class="pagination">
+          <input
+            type="button"
+            value="<<"
+            class="prism-control button button--icon button--small"
+          />
+          <input
+            type="button"
+            value="<"
+            class="prism-control button button--icon button--small"
+          />
+          <span class="pagination__label">Page 1 of 5</span>
+          <input
+            type="button"
+            value=">"
+            class="prism-control button button--icon button--small"
+          />
+          <input
+            type="button"
+            value=">>"
+            class="prism-control button button--icon button--small"
+          />
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="footer__content">
-            <div class="footer__content__social-icons">
-                <a href="https://www.instagram.com" target="_blank" class="button button--secondary button--icon"><img src="./assets/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com" target="_blank" class="button button--secondary button--icon"><img src="./assets/facebook.svg" alt="facebook"></a>
-                <a href="https://www.youtube.com" target="_blank" class="button button--secondary button--icon"><img src="./assets/youtube.svg" alt="YouTube"></a>
-            </div>
-            <ul class="footer__content__links">
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/contact.html">Contact us</a></li>
-            </ul>
-            <p class="footer__content__legal">&#169; Prism 2025</p>
+      <div class="footer__content">
+        <div class="footer__content__social-icons">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="./assets/instagram.svg" alt="Instagram"
+          /></a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="./assets/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            class="button button--secondary button--icon"
+            ><img src="./assets/youtube.svg" alt="YouTube"
+          /></a>
         </div>
+        <ul class="footer__content__links">
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/contact.html">Contact us</a></li>
+        </ul>
+        <p class="footer__content__legal">&#169; Prism 2025</p>
+      </div>
     </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
 </html>
