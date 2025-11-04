@@ -43,8 +43,14 @@ $post-summary-background-color: u.get-gray("800");
     }
   }
 
-  h2:hover {
-    text-decoration-line: underline;
+  &__title {
+    &:hover {
+      text-decoration: none;
+    }
+
+    &__content:hover {
+      text-decoration-line: underline;
+    }
   }
 
   .button {
