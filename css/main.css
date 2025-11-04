@@ -174,11 +174,11 @@ h2 {
 .post-list h2 {
   color: hsl(332, 95%, 86%);
 }
-h2.post-summary__title {
+h2.post-summary__title__content {
   font-size: 1.75rem;
 }
 @media (min-width: 576px) {
-  h2.post-summary__title {
+  h2.post-summary__title__content {
     font-size: 2.25rem;
   }
 }
@@ -448,7 +448,10 @@ a.button.button--icon {
     height: 300px;
   }
 }
-.post-summary h2:hover {
+.post-summary__title:hover {
+  text-decoration: none;
+}
+.post-summary__title__content:hover {
   text-decoration-line: underline;
 }
 .post-summary .button {

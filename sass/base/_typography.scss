@@ -32,7 +32,7 @@ h2 {
     color: utilities.get-primary-color("400");
   }
 
-  &.post-summary__title {
+  &.post-summary__title__content {
     font-size: 1.75rem;
 
     @include utilities.respond-to("sm") {
