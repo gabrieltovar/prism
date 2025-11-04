@@ -52,7 +52,7 @@ $post-summary-background-color: u.get-gray("800");
     margin-top: 1rem;
 
     @include u.respond-to("lg") {
-      display: block;
+      display: flex;
       margin-top: 1rem;
     }
   }

@@ -26,6 +26,8 @@ $icon-button-icon-color: u.get-gray("900");
 .button {
   $secondary-selector: #{&}--secondary;
   @include u.set-body-font(900, 1.125rem);
+  @include u.flex(0.5rem, row, center, center);
+  width: fit-content;
   height: $button-height;
   border-style: none;
   border-radius: $button-border-radius;
@@ -66,10 +68,6 @@ $icon-button-icon-color: u.get-gray("900");
 
 /* Adjustments specific to link buttons */
 a.button {
-  display: block;
-  align-content: center;
-  width: fit-content;
-
   &:hover {
     text-decoration: none;
   }
@@ -84,7 +82,6 @@ a.button {
   width: $icon-button-width;
   height: $icon-button-height;
   padding: 0;
-  justify-items: center;
 
   &.button--small {
     width: $icon-button-width-small;
@@ -92,7 +89,6 @@ a.button {
   }
 
   img {
-    display: block;
     width: $icon-button-icon-size;
     filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(30%)
       hue-rotate(235deg) brightness(96%) contrast(92%);
